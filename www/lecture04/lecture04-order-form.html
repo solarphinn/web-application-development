@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Order Sushi!</title>
+  </head>
+  <body>
+    <form method="post" action="../cgi-bin/lecture04-order-sushi.py">
+      Name: <input type="text" name="name"><BR>
+      Fries with that: <select name="fries">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select><BR>
+      <input type="checkbox" name="roll_type" value="Spicy Tuna">Spicy Tuna<BR>
+      <input type="checkbox" name="roll_type" value="California">California<BR>
+      <input type="checkbox" name="roll_type" value="Ice Cream">Ice Cream<BR>
+      Phone Number: <input type="text" name="phone"><BR>
+      Credit Card: <input type="text" name="credit_card"><BR>
+      <input type="submit" value="Place Order!">
+    </form>
+  </body>
+</html>
