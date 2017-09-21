@@ -1,0 +1,10 @@
+<root>
+    <grandparent name="shmi">
+        <parent name="darth vader">
+            <child name="luke"/>
+            <child name="leia">
+                <grandchild name="ben"/>
+            </child>
+        </parent>
+    </grandparent>
+</root>

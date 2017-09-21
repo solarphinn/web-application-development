@@ -1,0 +1,22 @@
+<html>
+  <head>
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"/>
+
+    <script>
+      window.onload = function() {
+        var ul = document.createElement("ul")
+        var li = document.createElement("li")
+        li.textContent = "Item # 1"
+        ul.appendChild(li)
+        document.body.appendChild(ul)
+      }
+    </script>
+
+    <script>
+      $(document).ready(function() {
+        console.log('ready!');
+      });
+    </script>
+  </head>
+</html>

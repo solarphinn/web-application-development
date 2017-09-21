@@ -1,0 +1,26 @@
+// add a CSS style tag to the head
+var style = document.createElement("style")
+var type = document.createAttribute("type")
+type.value = "text/css"
+style.attributes.setNamedItem(type)
+document.head.appendChild(style)
+// add a CSS selector for headings (h1)
+var h1 = document.createTextNode("h1 {color: red; }")
+style.appendChild(h1)
+// use a different method to change div tags
+style.textContent += "div { font-family: Courier }"
+
+// add a title
+var title = document.createElement("title")
+var content = document.createTextNode("A New Title!")
+title.appendChild(content)
+document.head.appendChild(title)
+
+// XML parsing
+var grandparents = document.getElementsByTagName("grandparent")
+var shmi = grandparents[0]
+shmi.attributes[0].name
+shmi.attributes[0].value
+var children = shmi.getElementsByTagName("child")
+
+
