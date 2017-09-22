@@ -1,24 +1,23 @@
 #!/usr/bin/env python
 
+'''
+This is a modified version of the script from Lecture 04 that is hard coded to
+query the orders table in the sushi.db database.
+'''
+
 import cgitb
 import cgi
 import sqlite3
 
 cgitb.enable()
 
-form = cgi.FieldStorage()
-
-
 print 'Content-Type: text/html'
 print
 
-# should use a query string like the following:
-# ?database_name=something.db&table_name=sometable
-database_name = form['database_name'].value
-table_name = form['table_name'].value
 
-print database_name
-print table_name
+# does not use form data; these values are hard coded
+database_name = 'sushi.db'
+table_name = 'orders'
 
 conn = sqlite3.connect(database_name)
 c = conn.cursor()

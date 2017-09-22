@@ -55,22 +55,26 @@ phone = sushi_form['phone'].value
 conn = sqlite3.connect('sushi.db')
 c = conn.cursor()
 
-c.execute('insert into orders values (?,?,?,?,?)', (name, fries, str(rolls), phone, ccn))
+c.execute('insert into orders values (?,?,?,?,?)', (name, fries, str(rolls),
+                                                    phone, ccn))
 
 conn.commit()
 conn.close()
 
 print '<h1>You Ordered Some Sushi!!!!'
 
-print '<h2>Your <span class="red_text">' + str(rolls) + '</span> sushi <span class="red_text">'
+print '<h2>Your <span class="red_text">' + str(rolls) + \
+      '</span> sushi <span class="red_text">'
 
 if fries == 'yes':
     print 'WITH'
 else:
     print 'without D:'
 
-print '</span> fries will be carefully crafted by our chefs soon.  Your credit card with number <span class="red_text">' + ccn + '</span>'
-print ' will be charged.  If there is a problem, we\'ll call you at <span class="red_text">' + phone + '</span>!'
+print '</span> fries will be carefully crafted by our chefs soon.  Your credit' \
+      ' card with number <span class="red_text">' + ccn + '</span>'
+print ' will be charged.  If there is a problem, we\'ll call you at ' \
+      '<span class="red_text">' + phone + '</span>!'
 
 print '''
   </body>
