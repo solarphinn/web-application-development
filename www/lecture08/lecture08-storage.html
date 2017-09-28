@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <!-- load jQuery -->
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+        <!-- include JS -->
+        <script type="text/javascript" src="lecture08.js"></script>
+
+        <style type="text/css">
+            h2 {
+                color: #0000FF;
+            }
+
+        </style>
+
+        <title>Lecture 08 Storage Demo</title>
+    </head>
+    <body>
+        <h1 id="views"></h1>
+
+        <h2>Add Something!</h2>
+        Key:<br/>
+        <input type="text" id="key"/><br/>
+        Value:<br/>
+        <input type="text" id="value"/><p/>
+        <button type="button" id="local_button">Store in Local Storage</button>
+        <button type="button" id="session_button">Store in Session
+            Storage</button>
+
+
+        <h2>Local Storage Content</h2><p/>
+        <div id="local_contents"></div><p/>
+
+
+        <h2>Session Storage Content</h2><p/>
+        <div id="session_contents"></div><p/>
+
+        <button type="button" id="clear_button">Clear All Storage!</button>
+
+    </body>
+</html>
