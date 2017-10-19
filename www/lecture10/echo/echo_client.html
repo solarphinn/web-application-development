@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Socket.IO Echo Example</title>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+
+    </head>
+    <body>
+	<p id="echo"></p>
+        <form action="">
+            <input id="outgoing" autocomplete="off"/><button>Echo!</button>
+        </form>
+        <script>
+            var socket = io();
+
+            $('form').submit(function() {
+                var message = $('#outgoing').val();
+                console.log("should transmit outgoing message: " + message);
+
+                socket.emit('outgoing', $('#outgoing').val());
+
+                $('#outgoing').val('');
+
+                return false;
+            });
+
+            socket.on('echo', function(msg) {
+                // add the contents of the message to the unordered list.
+               $('#echo').text(msg);
+            });
+         </script>
+    </body>
+</html>
